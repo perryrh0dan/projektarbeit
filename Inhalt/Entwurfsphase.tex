@@ -1,0 +1,70 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Entwurfsphase} 
+\label{sec:Entwurfsphase}
+
+\subsection{Zielplattform}
+\label{sec:Zielplattform}
+Das Abschlussprojekt soll wie bereits im Projektziel beschrieben eine Erweiterung zu bereits vorhandenen Transaktionen darstellen als auch eigene Programme zur Verwaltung und Massenpflege der Kommentare mit sich bringen. Als Programmiersprache wird ABAP (Advanced Bussiness Application Programming) verwendet, eine eigens von der SAP entwickelte Programmiersprache, die in ihrer Grundstruktur der Sprache COBOL ähnelt.
+
+\subsection{Architekturdesign}
+\label{sec:Architekturdesign}
+Die Programme im APO und ECC werden nach dem MVC (Model View Controller) Konzept programmiert. Allerdings habe ich in diesem Fall kein Model benötigt. Es gibt in jedem System jeweils eine GUI Klasse, welche für die visuelle Darstellung und die Reaktion auf Benutzerinteraktionen zuständig ist. Diese Klasse besitzt für jeden Screen eine Member Struktur, die die anzuzeigenden Daten hält und jeweils eine PBO (Process Before Output) und PAI (Process After Input) Methode. Die jeweiligen Screens werden in einer Funktionsgruppe definiert und mithilfe des SAP Screen Panters gestaltet. Außerdem gibt es jeweils eine Controller Klasse, welcher für die gesamte Logik zuständig ist. Die Startpunkte der Programme sind jeweils ein Report welcher, entweder einen Selektionsbildschirm hat oder direkt über ein Funktionsmodul, welches in der Funktionsgruppe definiert ist den gewünschten screen startet, da aus einem Report direkt kein Screen aufgerufen werden kann. Das PBO und das PAI in der Funktionsgruppe sind dynamisch agierende Module, welche dann auf die jeweilige Methode der GUI Klasse weiterleiten.
+
+\subsection{Entwurf des Userinterface}
+\label{sec:Benutzeroberflaeche} 
+Um die Anwendungen möglichst Benutzerfreundlich zu gestalten wurde im Vorfeld klar strukturiert auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die Möglichen Selektionskriterien vorab geplant damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im ECC einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbank Tabelle AUFK angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wird darauf geachtet, dass der code leicht zu erweitern ist, da hier später auch noch weitere Tabellen und Felder ausgewählt werden sollen können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftrags Daten und den Kommentaren in einem ALV (ABAP List View) dargestellt. Im APO wird es denselben Hauptscreen auch geben hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig der Kategorie in der Datenbank /SAPAPO/ORDFLDS gespeichert werden. 
+
+\subsection{Datenmodell}
+\label{sec:Datenmodell}
+
+\begin{itemize}
+	\item Entwurf/Beschreibung der Datenstrukturen (\zB \acs{ERM} und/oder Tabellenmodell, \acs{XML}-Schemas) mit kurzer Beschreibung der wichtigsten (!) verwendeten Entitäten.
+\end{itemize}
+
+\paragraph{Beispiel}
+In \Abbildung{ER} wird ein \ac{ERM} dargestellt, welches lediglich Entitäten, Relationen und die dazugehörigen Kardinalitäten enthält. 
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{ERDiagramm.pdf}{0.6}
+\caption{Vereinfachtes ER-Modell}
+\label{fig:ER}
+\end{figure} 
+
+
+\subsection{Geschäftslogik}
+\label{sec:Geschaeftslogik}
+
+\begin{itemize}
+	\item Modellierung und Beschreibung der wichtigsten (!) Bereiche der Geschäftslogik (\zB mit Kom\-po\-nen\-ten-, Klassen-, Sequenz-, Datenflussdiagramm, Programmablaufplan, Struktogramm, \ac{EPK}).
+	\item Wie wird die erstellte Anwendung in den Arbeitsfluss des Unternehmens integriert?
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Klassendiagramm, welches die Klassen der Anwendung und deren Beziehungen untereinander darstellt kann im \Anhang{app:Klassendiagramm} eingesehen werden.
+
+\Abbildung{Modulimport} zeigt den grundsätzlichen Programmablauf beim Einlesen eines Moduls als \ac{EPK}.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{modulimport.pdf}{0.9}
+\caption{Prozess des Einlesens eines Moduls}
+\label{fig:Modulimport}
+\end{figure}
+
+
+\subsection{Maßnahmen zur Qualitätssicherung}
+\label{sec:Qualitaetssicherung}
+Um die hohen Qualitätsanforderungen der Camelot ITLab zu gewährleisten und die Qualitätsanforderungen des Projekts zu sicher, werden während der laufenden Entwicklung nach jedem Iterationsschritt die neu eingebauten Funktionalitäten getestet. Außerdem wird es mehrere Code Review geben in denen andere Entwickler sich den Code anschauen und gegebenenfalls Schwachstellen erkennen und Verbesserungsvorschläge einbringen. Alle Tests werden manuell durchgeführt.  
+
+
+\subsection{Pflichtenheft/Datenverarbeitungskonzept}
+\label{sec:Pflichtenheft}
+\begin{itemize}
+	\item Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
+
+
+\Zwischenstand{Entwurfsphase}{Entwurf}

@@ -1,0 +1,44 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Implementierungsphase} 
+\label{sec:Implementierungsphase}
+
+\subsection{Iterationsplanung}
+\label{sec:Iterationsplanung}
+Bevor mit der eigentlichen Implementierung begonnen wurde, wurde zuerst ein Interationsplan erstellt. In ihm werden die Iterationsschritte und deren Reihenfolge definiert. innerhalb einer Iteration wird die zuvor definierte Funktionalität eingebaut. Der erstellte Iterationsplan befindet sich im Anhang.
+
+\subsection{Implementierung der Datenstruktur ECC}
+\label{sec:Implementierung der Datenstruktur ECC}
+Zuerst wurden alle Dictionary-Objekte, welche im \ac{ECC} gebraucht werden, erstellt. Eine Vollständige Liste aller Tabellen Typen, Strukturen, Datenelemente und Domänen können dem Anhang entnommen werden. Außerdem wurde die Datenbank Tabellen wie unter Datenmodell beschrieben implementiert. Die AUFK wurde mittels einem Custom Include um das Feld ZZ\_ORDER\_COMMENT erweitert.
+
+\subsection{Implementierung der Benutzeroberfläche ECC}
+\label{sec:Implementierung der Benutzeroberfläche ECC}
+In der GUI Funktionsgruppe wurden jeweils ein Screen für das Maintenance Programm (Screen 0100) und ein Screen für das Administration Programm (Screen 0500) mithilfe des Screen Panters angelegt und gestaltet. Der Screen 0100 enthält lediglich einen Custom Container, in welchem dann später das ALV angezeigt wird. Der Screen 0500 hat zum jetzigen Zeitpunkt nur ein Label und ein Eingabefeld, dessen Element sich in der Member Struktur des Screens der GUI Klasse befindet. Das \ac{PBO} und das \ac{PAI} der Funktionsgruppe wurde dynamisch programmiert. Das bedeutet, dass je nach Screen die zugehörige Methode in der GUI Klasse aufgerufen wird. Die User Befehle (OK Code) werden in ein Member Feld der GUI Klasse geschrieben. Außerdem wurde für das Maintenance Programm ein extra Selektionsbildschirm angelegt, in welchem man gewisse Parameter wie Benutzer, Auftragsnummer usw. eingeben kann und somit die dargestellten Aufträge gefiltert werden. Screenshots der Anwendung befinden sich im Anhang auf Seite XX.
+
+\paragraph{Beispiel}
+Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
+
+\subsection{Implementierung PBO und PAI}
+\label{sec:Implementierung PBO und PAI}
+Jeder Screen der Funktionsgruppe hat seine eigene \ac{PBO} und \ac{PAI} Methode in der GUI Klasse. Im PBO werden die Daten geladen bevor sie dann auf dem Screen angezeigt werden. Dies passiert, indem die jeweilige Controller Methode aufgerufen wird. Die Daten werden allerdings nicht jedes Mal neu geladen, wenn wir das \ac{PBO} betreten, sondern nur, wenn die ALV Struktur, welche in der Member Struktur des jeweiligen Screens ist, Initial also "leer" ist. Dadurch wird verhindert das wir zu viele Datenbank Zugriffe haben, da jedes Mal die Daten neu geladen werden. Nichts desto trotz können wir einen Refresh einleiten indem wir einfach die \ac{ALV} Struktur Clearen. Im \ac{PAI} werden all User Befehle (OK Code) abgefangen welche vom Screen geworfen werden und dann die jeweilige Action ausgeführt. 
+
+\subsection{Implementierung der Geschäftslogik ECC}
+\label{sec:Implementierung der Geschäftslogik ECC}
+Die eigentliche Geschäftslogik und Datenbank zugriffe finden alle im Controller statt. Hier wurden mehrere Methoden implementiert, welche die gesamten Aufträge, die derzeit unterstützt werden, (Prozessaufträge, Produktionsaufträge aus der AUFK mit join auf die AFKO für Material Infos und Planaufträge aus der PLAF) laden. Außerdem wurde die Speicherlogik implementiert. In der Member Struktur des Screens gibt es zwei Tabellen eine für die Daten, die dann tatsächlich im \ac{ALV} angezeigt werden und eine andere in welcher immer die originalen Daten seit dem letzten speichern drin sind. Beim speichern werden nun diese zwei Tabellen verglichen und so alle Aufträge, welche sich nicht geändert haben aussortiert, sodass die Speicherlogik nur auf die tatsächlich modifizierten oder erstellten Aufträge angewendet wird.   
+
+\subsection{Implementierung der COR Erweiterung}
+\label{sec:Implementierung der COR Erweiterung}   
+Um die COR Transaktion (1-3) zu erweitern musste zunächst einmal ein passender Erweiterungspunkt gefunden werden, zum einen einen Screen Exit und zum anderen zwei Function Exits vor und nach dem laden der Daten hat. Verwendet wurde das Enhancement PPCO0020. Diese bietet alle Komponenten, die ich zum anzeigen der Daten benötige. Zuerst wurde das Screen Exit mit einem Label und einem Eingabefeld erweitert und aktiviert. Dann wurde das PBO Modul um eine Methode erweitert, dass das Eingabefeld in der COR3 deaktiviert wird, da diese Transaktion nur zum Anzeigen ist. Außerdem wurde in dem Top Include eine globale Struktur angelegt, dessen ZZ\_ORDER\_COMMENT Feld hinter dem Eingabe Feld liegt. In dem ersten Function Exit, wird diese Struktur dann gefüllt. Da der Planer aber auch die Möglichkeit haben soll Kommentar von Prozessaufträgen zu ändern bzw. beim anlegen eines Auftrags anzugeben wird noch ein weiterer Funktionsbaustein benötigt, da der oben genannte, keinen Function Exit für das Speichern hat, von wo wir unsere eigene Speicherlogik aus aufrufen können. Hierzu wurde der Erweiterungspunkt PPCO0007 gewählt. Dieser Erweiterungspunkt liefert einen Function Exit aus welchem dann eine statische Methode aus dem Controller aufgerufen wird damit der geänderte Kommentar nicht nur in der AUFK sondern auch in der /CAMELOT/OC\_COMT gespeichert wird. Und wo zu einem späteren Zeitpunkt dann der RFC ausgeführt wird.
+
+\subsection{Implementierung der Datenstruktur APO}
+\label{sec:Implementierung der Datenstruktur APO} 
+
+\subsection{Implementierung der Benutzeroberfläche APO}
+\label{sec:Implementierung der Benutzeroberfläche APO}  
+
+\subsection{Implementierung der Geschäftslogik APO}
+\label{sec:Implementierung der Geschäftslogik APO}  
+
+\subsection{Implementierung der RRP3 Erweiterung}
+\label{sec:Implementierung der RRP3 Erweiterung}   
+
+\Zwischenstand{Implementierungsphase}{Implementierung}

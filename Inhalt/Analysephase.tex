@@ -1,0 +1,110 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Analysephase} 
+\label{sec:Analysephase}
+
+
+\subsection{Ist-Analyse} 
+\label{sec:IstAnalyse}
+Das Projekt wird im Umfeld der Produktionsplanung durchgeführt und bezieht sich auf alle Zutun Abgangselemente. Der Planer hat im SAP APO (”Advanced Planning \& Optimization”) die	Möglichkeit Zugangs und Abgangselemente manuell anzulegen. In Folgeprozessen kann es zu	Problemen führen, wenn die Gründe dieser Planänderungen nicht sichtbar gemacht werden.	Bisher müssen solche Änderungen ohne Systemunterstützung per Email oder auf anderem Wege an alle beteiligten mitgeteilt werden.
+
+
+\subsection{Wirtschaftlichkeitsanalyse}
+\label{sec:Wirtschaftlichkeitsanalyse}
+Aufgrund der Probleme, die bereits in der Projektbegründung und der Ist-Analyse beschrieben wurden, ist dieses Projekt absolut notwendig. Trotzdem werde ich in dem folgenden Abschnitt analysieren ob die Umsetzung auch aus Wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
+
+
+\subsubsection{\gqq{Make or Buy}-Entscheidung}
+\label{sec:MakeOrBuyEntscheidung}
+Da wir bereits ein großes Portfolio an verschiedenen Tools im SAP Umfeld haben, welche den Planer unterstützen	
+
+
+\subsubsection{Projektkosten}
+\label{sec:Projektkosten}
+Die Projektkosten, die während dem gesamten Entwicklungszeitraum anfangen sollen im Folgenden kalkuliert werden. Dafür müssen neben den Kosten, die für Hardware und Software anfallen auch die Personalkosten berücksichtigt werden. Da die genauen Personalkosten Betriebsgeheimnis sind, wird die Kalkulation mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergibt sich aus dem Monats ca. 1000€.
+		
+\begin{eqnarray}
+	365 \mbox{ Tage/Jahr} \cdot \frac{5}{7} - 30 Tage = 260 \mbox{ Tage/Jahr}\\
+	8 \mbox{ h/Tag} \cdot 230 \mbox{ Tage/Jahr} = 1840 \mbox{ h/Jahr}\\
+	\eur{1000}\mbox{/Monat} \cdot 12 \mbox{ Monate/Jahr} = \eur{12000} \mbox{/Jahr}\\
+	\frac{\eur{12000} \mbox{/Jahr}}{1840 \mbox{ h/Jahr}} \approx \eur{6,52}\mbox{/h}
+\end{eqnarray}
+	
+Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€ die Stunde und die kosten eines normalen Mitarbeiters schätze ich auf 25€ die Stunde. Für die Ressourcen werden die gesamten Hardwarekosten addiert und dann durch die durchschnittliche Lebenszeit in Arbeitsstunden, d.h. 3 * 365 * 5/7 * 8 geteilt.
+	
+Tabelle~\ref{tab:HardwareKosten} zeigt die Hardwarekosten, die für die Geräte eines Mitarbeiters anfallen.
+\tabelle{HardwareKosten}{tab:HardwareKosten}{HardwareKosten}\\
+	
+Daraus Ergibt sich dann folgende Rechnung und Stundesatz
+\begin{eqnarray}
+	\frac{\eur{1680} \mbox{/3 Jahre}}{3} = 560 \mbox{/Jahr}\\
+	\frac{\eur{560} \mbox{/Jahre}}{1840 \mbox{ h/Jahr}} \approx \eur{0.30}\mbox{/h}
+\end{eqnarray}
+
+Es Ergibt sich also ein Stundensatz von 0.3€ für die Hardware Kosten. Dazu kommen natürlich noch Kosten für Arbeitsplatz, Möblierung, Strom und Internet.
+\tabelle{ProjektKosten}{tab:ProjektKosten}{ProjektKosten.tex}
+
+\subsubsection{Amortisationsdauer}
+\label{sec:Amortisationsdauer}
+Im folgenden Abschnitt soll berechnet werden, ab welchem Zeitraum sich die Entwicklung auch aus Wirtschaftlichem Sichtpunk für das Camelot ITLab und für den Kunden lohnt. Die Amortisationsdauer wird berechnet indem man die Produktionskosten bzw. Anschaffungskosten durch die Gewinne dividiert, welche durch das neue Produkt erzielt wurden.
+
+\paragraph{Camelot ITLab}
+Die Gewinne welche durch dieses Produkt entstehen lassen sich in zwei Kategorien teilen. Zum einen die Gewinne welche durch den tatsächlichen verkauf dieses Produkt erzielt werden und zum anderen die Gewinne die erzielt werden, wenn der Kunde außerdem neben diesem Tool dann auch noch andere Software der Camelot kaufen möchte. Für diese Tool wird ein Preis von etwa 500€ angesetz. Der Break-even-point (Gewinnschwell) liegt bei
+\begin{eqnarray}
+\frac{\eur{1510}}{\eur{500}} \approx 3 
+\end{eqnarray}
+
+\paragraph{Kunde}
+In Fall dieses Projektes lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösung, Kommentare per Email verschicken, Zettelwirtschaft, usw. deutlich verringert wird. Zum Anderen erspart das Tool dem Planer, welcher die Prozess anlegt deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt um die Kommentare einzutragen und an seine Kollegen zu verteilen und den Mitarbeitern an der Maschine Zeit, welche die Kommentare direkt in der Transaktion neben den Aufträgen sehen deutlich Zeit. 
+
+\paragraph{Beispielrechnung (verkürzt)}
+Es wird davon ausgegangen, dass ein Planer jeden Tag ca. eine Stunde damit beschäftigt ist Aufträge zu Kommentieren. Dieses Tool bietet eine Zeitersparung von ca. 50\% da die Texte weiterhin per Hand verfasst werden müssen. Dies bedeutet Zeiteinsparung von 30 Minuten pro Tag und pro Planer. Bei etwa 230 Arbeitstagen pro Jahr ergibt sich eine gesamte Zeiteinsparung von  
+\begin{eqnarray}
+230 \mbox{ Tage/Jahr} \cdot 30 \mbox{ min/Tag} = 6900 \mbox{ min/Jahr} = 115 \mbox{ h/Jahr} 
+\end{eqnarray}
+
+Das Gehalt eines Produktionsplaners beträgt laut Experten etwa 14€ die Stunde. Die Tatsächlichen kosten, die für die Firma anfallen, werden auf ca. 20€ geschätzt.
+Dadurch ergibt sich eine jährliche Einsparung von 
+\begin{eqnarray}
+115 \mbox{h} \cdot \eur{(20)}{\mbox{/h}} = \eur{2300}
+\end{eqnarray}
+
+Je nach Firmengröße und Anzahl der Planer variiert die Amortisationszeit stark. Daher wurden Anhand dreier Beispiele die Zeit berechnet.
+
+Die Amortisationszeit für eine kleine Firma mit 2 Planern beträgt:
+$\frac{\eur{500}}{2 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,19 \mbox{ Jahre} \approx  \mbox{ Wochen}$.
+
+Die Amortisationszeit für eine mittelgroße Firma mit 50 Planern beträgt
+$\frac{\eur{500}}{50 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,004 \mbox{ Jahre} \approx 1,5 \mbox{ Tage}$.
+
+Die Amortisationszeit für eine große Firma mit 200 Planern beträgt
+$\frac{\eur{500}}{200 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,001 \mbox{ Jahre} \approx 9 \mbox{ Stunden}$.
+
+\subsection{Nutzwertanalyse}
+\label{sec:Nutzwertanalyse}
+Lohnt sich das Projekt für den Kunden was wir gespart weniger fehler usw. alles außer geld
+
+
+\subsection{Anwendungsfälle}
+\label{sec:Anwendungsfaelle}
+
+An der Maschiene kann der arbeiter direkt neben dem auftrag auch den Kommentar sehen.
+
+Use-Case Diagram
+
+
+\subsection{Qualitätsanforderungen}
+\label{sec:Qualitaetsanforderungen}
+z.b Administration nicht in key felder der tabelle schreiben input checks.
+
+
+\subsection{Lastenheft/Fachkonzept}
+\label{sec:Lastenheft}
+\begin{itemize}
+	\item Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
+	\item Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+
+\Zwischenstand{Analysephase}{Analyse}
