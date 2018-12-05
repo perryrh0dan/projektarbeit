@@ -43,6 +43,17 @@
 \input{Tabellen/#1}
 \end{center}}
 
+\newcommand*{\rowstyle}[1]{% sets the style of the next row
+	\gdef\@rowstyle{#1}%
+	\@rowstyle\ignorespaces%
+}
+\newcolumntype{=}{% resets the row style
+	>{\gdef\@rowstyle{}}%
+}
+\newcolumntype{+}{% adds the current row style to the next column
+	>{\@rowstyle}%
+}
+
 % einfaches Wechseln der Schrift, z.B.: \changefont{cmss}{sbc}{n}
 \newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 
