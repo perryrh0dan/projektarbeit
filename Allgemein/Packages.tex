@@ -62,6 +62,9 @@
 \usepackage{todonotes} % definiert u.a. die Befehle \todo und \listoftodos
 \usepackage[square]{natbib} % wichtig für korrekte Zitierweise
 
+\usepackage{etoolbox}
+\preto\section{\clearpage} % jede Sektion soll auf einer neuen Seite beginnen
+
 \usepackage[section]{placeins}
 
 % PDF-Optionen -----------------------------------------------------------------
