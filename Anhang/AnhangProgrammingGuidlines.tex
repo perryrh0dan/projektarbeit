@@ -1,20 +1,36 @@
-\subsection{programmierrichtlinien}
-\label{app:programmierrichtlinien}
-Im folgenden Abschnitt werden kurz die am häufigsten gebrauchten programmierrichtlinien des CAMELOT ITLabs aufgeführt.
+\subsection{Programmierrichtlinien}
+\label{app:Programmierrichtlinien}
+Im folgenden Abschnitt werden kurz die am häufigsten gebrauchten Programmierrichtlinien des CAMELOT ITLabs aufgeführt.
 
-\subsubsection{Bennenung}:
+\subsubsection{Bennenung}
+\label{Bennenung}
 \paragraph{Variablen}
 Globale Variablen z.B. Variablen in Reports, müssen immer mit einem g(global) anfangen. 
 Lokale Variablen z.B. in Methoden von Klassen, müssen immer mit einem l(local) anfangen.
 
 Darauf folgt dann entweder ein:
-	t für Tabellen
-	s für Strukturen
-	v für Variablen
+\begin{enumerate}
+	\item t für Tabellen
+	\item s für Strukturen
+	\item v für Variablen
+\end{enumerate}
 	
-Darauf folgt dann ein \_ und ein passender Name welcher die Variable möglichst treffsicher beschreibt.
+Darauf folgt dann ein \_ und ein passender Name, welcher die Variable möglichst treffsicher beschreibt.
 
-\paragraph{Klassen}
+\paragraph{Klassen:}
 Klassen Bezeichnungen starten immer mit dem Paketnamen in welchem sich die Klassen befindet + CL(Class) z.B. /CAMELOT/CL\_OC. Der Paketname ist /CAMELOT/OC und in die Mitte wird ein CL gehängt.
+
+\subsubsection{Formatierung}
+\label{Formatierung}
+\paragraph{Pretty-Printer:}
+Der Pretty Printer, ein Tool welches den Quellcode aufbereitet und somit dem Entwickler eine bessere Lesbarkeit bietet muss ,wie in der folgenden Grafik dargestellt, eingestellt werden. Der Pretty-Printer ist über die Schaltfläche [Pretty Printer] oder die Tastenkombination "Umschalt + F1" aufzurufen.
+\begin{figure}[htb]
+	\centering
+	\includegraphicsKeepAspectRatio{PrettyPrinterSettings.png}{0.6}
+	\caption{Einstellungen des Pretty-Printers}
+\end{figure}
+
+
+
 	
 
