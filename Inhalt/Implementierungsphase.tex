@@ -14,7 +14,6 @@ Zuerst wurden alle Dictionary-Objekte, welche im \ac{ECC} gebraucht werden, erst
 \label{sec:Implementierung der Benutzeroberfläche ECC}
 In der \ac{GUI} Funktionsgruppe wurden jeweils ein Screen für das Maintenance Programm (Screen 0100) und ein Screen für das Administration Programm (Screen 0500) mithilfe des Screen Panters angelegt und gestaltet. Der Screen 0100 enthält lediglich einen Custom Container, in welchem dann später das \ac{ALV} angezeigt wird. Der Screen 0500 hat zum jetzigen Zeitpunkt nur ein Label und ein Eingabefeld, dessen Element sich in der Member Struktur des Screens der \ac{GUI} Klasse befindet. Das \ac{PBO} und das \ac{PAI} der Funktionsgruppe wurde dynamisch programmiert. Das bedeutet, dass je nach Screen die zugehörige Methode in der \ac{GUI} Klasse aufgerufen wird. Die User Befehle (OK Code) werden in ein Member Feld der \ac{GUI} Klasse geschrieben. Außerdem wurde für das Maintenance Programm ein extra Selektionsbildschirm angelegt, in welchem man gewisse Parameter wie Benutzer, Auftragsnummer usw. eingeben kann und somit die dargestellten Aufträge gefiltert werden. Screenshots der Anwendung befinden sich unter \Anhang{Screenshots}.
 
-\paragraph{Beispiel}
 Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
 
 \subsection{Implementierung PBO und PAI}
@@ -33,7 +32,6 @@ Um die COR Transaktion (1-3) zu erweitern musste zunächst einmal ein passender 
 \label{sec:Implementierung der Datenstruktur APO} 
 Nachdem im \ac{ECC} System nun alles Implementiert wurde, muss nun ein großteil der selben Datenstrukturen auch im \ac{APO} angelegt werden. Eine Liste aller Dictionary-Objekte kann dem Anhang entnommen werden. Des Weiteren wurde die /SAPAPO/ORDFLDS Datenbank Tabelle um ein Feld, ORDER\_COMMENT, erweitert. Im \ac{APO} wird keine extra Datenbank wie im \ac{ECC} benötigt, da für alle Aufträge die /SAPAPO/ORDFLDS Tabelle benutzt werden kann.
 
-\paragraph{Beispiel}
 Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
 
 \subsection{Implementierung der Benutzeroberfläche APO}
