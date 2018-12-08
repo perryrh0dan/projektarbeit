@@ -4,11 +4,13 @@
 
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
-Das Projekt wird im Umfeld der Produktionsplanung durchgeführt und bezieht sich im ersten Schritt nur auf Plan-, Prozess- und Produktionsaufträge. Der Planer hat im SAP \ac{APO} die	Möglichkeit Zugangs und Abgangselemente manuell anzulegen. In Folgeprozessen kann es zu Problemen führen, wenn die Gründe dieser Planänderungen nicht sichtbar gemacht werden. Bisher müssen solche Änderungen ohne Systemunterstützung per Email oder auf anderem Wege an alle beteiligten mitgeteilt werden.
+Das Projekt wird im Umfeld der Produktionsplanung durchgeführt und bezieht sich auf Plan-, Prozess- und Produktionsaufträge. Der Planer hat im SAP \ac{APO} die	Möglichkeit, Zugangs- und Abgangselemente manuell anzulegen. In Folgeprozessen kann es zu Problemen kommen, wenn die Gründe dieser Planänderungen nicht sichtbar sind. Bisher müssen solche Änderungen ohne Systemunterstützung per Email oder auf anderem Weg allen Beteiligten mitgeteilt werden.
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
-Aufgrund der Probleme, die bereits in der Projektbegründung und der Ist-Analyse beschrieben wurden, ist dieses Projekt absolut notwendig. Trotzdem werde ich in dem folgenden Abschnitt analysieren ob die Umsetzung auch aus Wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
+Aufgrund der Probleme, die bereits in der ~\nameref{sec:Projektbegruendung} und der ~\nameref{sec:IstAnalyse} beschrieben wurden, ist dieses Projekt absolut notwendig. Trotzdem werde ich in dem folgenden Abschnitt analysieren ob die Umsetzung auch aus Wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
+
+todo
 
 \subsubsection{\gqq{Make or Buy}-Entscheidung}
 \label{sec:MakeOrBuyEntscheidung}
@@ -21,7 +23,7 @@ TODO Projektbegründig
 
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
-Die Projektkosten, die während dem gesamten Entwicklungszeitraum anfallen, sollen im Folgenden kalkuliert werden. Dafür müssen neben den Kosten, die für Hardware und Software anfallen auch die Personalkosten berücksichtigt werden. Da die genauen Personalkosten Betriebsgeheimnis sind, wird die Kalkulation mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergibt sich aus dem Monatsgehalt ca. 1000€.
+Die Projektkosten, die während des gesamten Entwicklungszeitraum anfallen, sollen im Folgenden kalkuliert werden. Dafür müssen neben den Kosten, die für Hardware und Software anfallen auch die Personalkosten berücksichtigt werden. Da die genauen Personalkosten Betriebsgeheimnis sind, wird die Kalkulation mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergibt sich aus dem Monatsgehalt ca. 1000€.
 		
 \begin{eqnarray}
 	365 \mbox{ Tage/Jahr} \cdot \frac{5}{7} - 30 Tage = 260 \mbox{ Tage/Jahr}\\
@@ -30,41 +32,42 @@ Die Projektkosten, die während dem gesamten Entwicklungszeitraum anfallen, soll
 	\frac{\eur{12000} \mbox{/Jahr}}{1840 \mbox{ h/Jahr}} \approx \eur{6,52}\mbox{/h}
 \end{eqnarray}
 	
-Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€. Die kosten eines normalen Mitarbeiters werden auf 25€ die Stunde geschätzt. Um die anfallenden Hardwarekosten zu berechnen, werden die Anschaffungskosten aller Geräte summiert und dann durch die durchschnittliche Lebenszeit in Arbeitsstunden, in diesem Fall 3 * 365 * 5/7 * 8 geteilt.
+Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€. Die Kosten eines normalen Mitarbeiters werden auf 25€ die Stunde geschätzt. Um die anfallenden Hardwarekosten zu berechnen, werden die Anschaffungskosten aller Geräte summiert und dann durch die durchschnittliche Lebenszeit in Arbeitsstunden, in diesem Fall 3 * 365 * 5/7 * 8 geteilt.
 	
 Tabelle~\ref{tab:Hardwarekosten} zeigt die Hardwarekosten, die für die Geräte eines Mitarbeiters anfallen.
 \tabelle{Hardwarekosten}{tab:Hardwarekosten}{Hardwarekosten}\\
 	
-Daraus Ergibt sich dann folgende Rechnung und Stundesatz
+Daraus ergibt sich dann folgende Rechnung und Stundesatz
 \begin{eqnarray}
-	\frac{\eur{1680} \mbox{/3 Jahre}}{3} = 560 \mbox{/Jahr}\\
+	\frac{\eur{1680}}{3\mbox{ Jahre}} = 560 \mbox{/Jahr}\\
 	\frac{\eur{560} \mbox{/Jahre}}{1840 \mbox{ h/Jahr}} \approx \eur{0.30}\mbox{/h}
 \end{eqnarray}
 
-Es Ergibt sich also ein Stundensatz von 0.3€ für die Hardware Kosten. Dazu kommen natürlich noch Kosten für Arbeitsplatz, Möblierung, Strom und Internet und Lizenzen.
+Es ergibt sich also ein Stundensatz von 0.3€ für die Hardwarekosten. Sonstige wesentliche Kosten neben den Hardwarekosten sind natürlich auch Arbeitsplatz, Möblierung, Strom, Internet und Lizenzen, welche einen großteil der Ressourcenkosten ausmachen. Durch grobe Hochrechnung dieser komme ich auf Ressourcenkosten(ohne Personal) von ca. \eur{10} als Stundensatz.
 \tabelle{Projektkosten}{tab:Projektkosten}{Projektkosten.tex}
 
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
-Im folgenden Abschnitt soll berechnet werden, nach welchem Zeitraum sich die Entwicklung auch aus Wirtschaftlichem Sichtpunk für das Camelot ITLab und für den Kunden lohnt. Die Amortisationsdauer wird berechnet indem man die Produktionskosten bzw. Anschaffungskosten durch die Gewinne bzw. die niedrigeren Kosten, die aufgrund dieses Produktes enstanden sind, dividiert.
+Im folgenden Abschnitt soll berechnet werden, wann sich die Entwicklung aus wirtschaftlich Sicht für die Camelot ITLab GmbH und für den Kunden lohnt. Die Amortisationsdauer wird berechnet, indem man die Produktionskosten bzw. Anschaffungskosten durch die Gewinne bzw. Kostenersparnis, die aufgrund dieses Produktes entstanden sind, dividiert.
 
 \paragraph{Camelot ITLab}\mbox{} \\
-Die Gewinne welche durch dieses Produkt entstehen lassen sich in zwei Kategorien teilen. Zum einen die Gewinne welche durch den tatsächlichen verkauf dieses Produkt erzielt werden und zum anderen die Gewinne die erzielt werden, wenn der Kunde aufgrund dieses Tool dann auch noch weitere Software des Camelot ITLabs kaufen möchte. Für diese Tool wird ein Preis von etwa 500€ angesetz. Der Break-Even-Point (Gewinnschwell) liegt also bei
+Für diese Tool wird ein Preis von etwa 500€ angesetzt. Der Break-Even-Point (Gewinnschwell) liegt also bei
 \begin{eqnarray}
-\frac{\eur{1510}}{\eur{500}} \approx 3 \mbox{ verkaufte Einheiten} 
+\frac{\eur{1510}}{\eur{500}} \approx 3 \mbox{ verkauften Einheiten} 
 \end{eqnarray}
 
+todo
+
 \paragraph{Kunde}\mbox{} \\
-In Fall dieses Projektes lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösungen, Kommentare per Email verschicken, Zettelwirtschaft, usw. deutlich verringert werden. Zum Anderen erspart das Tool dem Planer, welcher die Prozess anlegt deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt um die Kommentare einzutragen und an seine Kollegen zu verteilen. Des weiteren ermöglicht es den Mitarbeitern direkt an der Maschine Kommentare direkt in der Transaktion neben den Aufträgen zu sehen. In der folgenden Beispielrechnung werden drei Scenarien einmal durchgerechnet. 
+In Fall dieses Projektes lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösungen, Kommentare per Email verschicken, Zettelwirtschaft, usw. deutlich verringert werden, zum anderen erspart das Tool dem Planer, welcher die Prozesse anlegt deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt, um die Kommentare einzutragen und an seine Kollegen zu verteilen. Des weiteren ermöglicht es den Mitarbeitern direkt an der Maschine Kommentare direkt in der Transaktion neben den Aufträgen zu sehen. In der folgenden Beispielrechnung werden drei Scenarien einmal durchgerechnet. 
 
 \paragraph{Beispielrechnung}
-Es wird davon ausgegangen, dass ein Planer jeden Tag ca. eine Stunde damit beschäftigt ist Aufträge zu Kommentieren. Dieses Tool bietet eine Zeitersparung von ca. 50\% da die Texte weiterhin per Hand verfasst werden müssen. Dies bedeutet eine Zeiteinsparung von 30 Minuten pro Tag und pro Planer. Bei etwa 230 Arbeitstagen pro Jahr ergibt sich eine gesamte Zeiteinsparung von  
+Es wird davon ausgegangen, dass ein Planer jeden Tag ca. eine Stunde damit beschäftigt ist, Aufträge zu kommentieren. Dieses Tool bietet eine Zeitersparnis von ca. 50\%, da die Kommentare direkt in der Transaktion verfasst werden können. Dies bedeutet eine Zeiteinsparung von 30 Minuten pro Tag und pro Planer. Bei etwa 230 Arbeitstagen pro Jahr ergibt sich eine gesamte Zeiteinsparung von  
 \begin{eqnarray}
 230 \mbox{ Tage/Jahr} \cdot 30 \mbox{ min/Tag} = 6900 \mbox{ min/Jahr} = 115 \mbox{ h/Jahr} 
 \end{eqnarray}
 
-Das Gehalt eines Produktionsplaners beträgt laut Experten etwa 14€ die Stunde. Die Tatsächlichen kosten, die für die Firma anfallen, werden auf ca. 20€ geschätzt.
-Dadurch ergibt sich eine jährliche Einsparung von 
+Das Gehalt eines Produktionsplaners beträgt laut Experten etwa 14€ die Stunde. Die tatsächlichen Kosten, incl. Nebenkosten, die für die Firma anfallen, werden auf ca. 20€ geschätzt. Dadurch ergibt sich eine jährliche Einsparung von 
 \begin{eqnarray}
 115 \mbox{h} \cdot \eur{(20)}{\mbox{/h}} = \eur{2300}
 \end{eqnarray}
@@ -82,17 +85,19 @@ $\frac{\eur{500}}{200 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,001 \mbox{ Ja
 
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
-In der folgenden Tabelle ~\ref{tab:Nutzwertanalyse} werden noch einige weitere Punkte aufgeführt welche für diese Produkt bzw. die alten Verfahren sprechen.
+In der folgenden Tabelle ~\ref{tab:Nutzwertanalyse} werden noch einige weitere Punkte aufgeführt, welche abseits der primären finanziellen Aspekte für diese Produkt bzw. die alten Verfahren sprechen.
 
 \tabelle{Nutzwertanalyse}{tab:Nutzwertanalyse}{Nutzwertanalyse}
 
+Sowie die Wirtschaftlichkeitsanalyse als auch die Nutzwertanalyse haben gezeigt wie sinnvoll und hilfreich diese Projekt ist.
+
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
-Während der Analysephase wurden einige der typischen Anwendungsfälle, die von den umzusetzenden Programmen und Erweiterungen abgedeckt werden sollen, mittels eines Use-Case-Diagramms zusammengetragen um einen groben Überblick über diese zu erhalten. Dieses Diagramm befindet sich im \Anhang{app:UseCase}.
+Während der Analysephase wurden einige der typischen Anwendungsfälle, die von den umzusetzenden Programmen und Erweiterungen abgedeckt werden sollen, mittels eines Use-Case-Diagramms zusammengetragen, um einen groben Überblick über diese zu erhalten. Dieses Diagramm befindet sich im \Anhang{app:UseCase}.
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
-Wie in jedem anderen Projekt des Camelot ITLabs gelten auch hier die Programmierrichtlinien. Ein kleine Zusammenfassung mit allen für dieses Projekt wichtigen Punkten findet sich im \Anhang{app:Programmierrichtlinien}. Außerdem muss es für den Administration Screen eine Eingabeüberprüfung geben, die verhindert, dass der User Keyfelder bzw. Felder die in der Datenbanktabelle nicht vorhanden sind angibt.
+Wie in jedem anderen Projekt der Camelot ITLab GmbH gelten auch hier die Programmierrichtlinien des Unternehmens. Eine Auszug mit für dieses Projekt wichtigen Punkten findet sich im \Anhang{app:Programmierrichtlinien}. Außerdem muss es für den Administration Screen eine Eingabeüberprüfung geben, die verhindert, dass der User Keyfelder bzw. Felder, die in der Datenbanktabelle nicht vorhanden sind, angibt.
 
 \subsection{Lastenheft/Fachkonzept}
 \label{sec:Lastenheft}
