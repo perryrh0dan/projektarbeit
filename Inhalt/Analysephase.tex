@@ -4,26 +4,18 @@
 
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
-Das Projekt wird im Umfeld der Produktionsplanung durchgeführt und bezieht sich auf Plan-, Prozess- und Produktionsaufträge. Der Planer hat im SAP \ac{APO} die	Möglichkeit, Zugangs- und Abgangselemente manuell anzulegen. In Folgeprozessen kann es zu Problemen kommen, wenn die Gründe dieser Planänderungen nicht sichtbar sind. Bisher müssen solche Änderungen ohne Systemunterstützung per Email oder auf anderem Weg allen Beteiligten mitgeteilt werden.
+Das Projekt wurde im Umfeld der Produktionsplanung durchgeführt und bezieht sich auf Plan-, Prozess- und Produktionsaufträge. Der Planer hat im SAP \ac{APO} die	Möglichkeit, Zugangs- und Abgangselemente manuell anzulegen. In Folgeprozessen kann es zu Problemen kommen, wenn die Gründe dieser Planänderungen nicht sichtbar sind. Bisher müssen solche Änderungen ohne Systemunterstützung per Email oder auf anderem Weg allen Beteiligten mitgeteilt werden.
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
-Aufgrund der Probleme, die bereits in der ~\nameref{sec:Projektbegruendung} und der ~\nameref{sec:IstAnalyse} beschrieben wurden, ist dieses Projekt absolut notwendig. Trotzdem werde ich in dem folgenden Abschnitt analysieren ob die Umsetzung auch aus Wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
+Aufgrund der Probleme, die bereits in der ~\nameref{sec:Projektbegruendung} und der ~\nameref{sec:IstAnalyse} beschrieben wurden, ist ersichtlich, wie wichtig dieses Projekt ist. Trotzdem wurde im folgenden Abschnitt analysieren ob die Umsetzung auch aus wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
 
 todo
 
-\subsubsection{\gqq{Make or Buy}-Entscheidung}
-\label{sec:MakeOrBuyEntscheidung}
-
-Da es etwas vergleichbares auf dem Markt noch nicht gibt und das Camelot ITLtodab davon lebt Software zu produzieren und zu verkaufen, würde es natürlich nix bringen die Software zu kaufen. Allerdings stellt sich die Frage selbst produzieren oder von einer fremd Firma oder Freelancern im Namen des Camelot ITLabs entwickeln zu lassen. In der Folgende Tabelle~\ref{tab:MakeOrBuy} werden alle ausschlaggebenden Punkte welche für die jeweilige Option sprechen aufgeführt.
-\tabelle{Make or Buy Analyse}{tab:MakeOrBuy}{MakeOrBuy}\\
-Aufgrund der oben genannten Punkte wurde beschlossen das Projekt selbst durchzuführen.
-
-TODO Projektbegründig
-
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
-Die Projektkosten, die während des gesamten Entwicklungszeitraum anfallen, sollen im Folgenden kalkuliert werden. Dafür müssen neben den Kosten, die für Hardware und Software anfallen auch die Personalkosten berücksichtigt werden. Da die genauen Personalkosten Betriebsgeheimnis sind, wird die Kalkulation mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergibt sich aus dem Monatsgehalt ca. 1000€.
+Es wurden neben den Kosten, die für Hardware und Software anfallen auch die Personalkosten berücksichtigt.
+Da die genauen Personalkosten Betriebsgeheimnis sind, werden die Kalkulationen mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergab sich aus dem Monatsgehalt von ca. 1000€.
 		
 \begin{eqnarray}
 	365 \mbox{ Tage/Jahr} \cdot \frac{5}{7} - 30 Tage = 260 \mbox{ Tage/Jahr}\\
@@ -32,34 +24,33 @@ Die Projektkosten, die während des gesamten Entwicklungszeitraum anfallen, soll
 	\frac{\eur{12000} \mbox{/Jahr}}{1840 \mbox{ h/Jahr}} \approx \eur{6,52}\mbox{/h}
 \end{eqnarray}
 	
-Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€. Die Kosten eines normalen Mitarbeiters werden auf 25€ die Stunde geschätzt. Um die anfallenden Hardwarekosten zu berechnen, werden die Anschaffungskosten aller Geräte summiert und dann durch die durchschnittliche Lebenszeit in Arbeitsstunden, in diesem Fall 3 * 365 * 5/7 * 8 geteilt.
+Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€.
+Die Kosten eines normalen Mitarbeiters wurden auf 25€ die Stunde geschätzt. 
+Um die anfallenden Hardwarekosten zu berechnen, wurden die Anschaffungskosten aller Geräte summiert und dann durch die durchschnittliche Lebenszeit in Arbeitsstunden, in diesem Fall 3 * 365 * 5/7 * 8, geteilt.
 	
 Tabelle~\ref{tab:Hardwarekosten} zeigt die Hardwarekosten, die für die Geräte eines Mitarbeiters anfallen.
 \tabelle{Hardwarekosten}{tab:Hardwarekosten}{Hardwarekosten}\\
-	
-Daraus ergibt sich dann folgende Rechnung und Stundesatz
+
 \begin{eqnarray}
 	\frac{\eur{1680}}{3\mbox{ Jahre}} = 560 \mbox{/Jahr}\\
 	\frac{\eur{560} \mbox{/Jahre}}{1840 \mbox{ h/Jahr}} \approx \eur{0.30}\mbox{/h}
 \end{eqnarray}
 
-Es ergibt sich also ein Stundensatz von 0.3€ für die Hardwarekosten. Sonstige wesentliche Kosten neben den Hardwarekosten sind natürlich auch Arbeitsplatz, Möblierung, Strom, Internet und Lizenzen, welche einen großteil der Ressourcenkosten ausmachen. Durch grobe Hochrechnung dieser komme ich auf Ressourcenkosten(ohne Personal) von ca. \eur{10} als Stundensatz.
+Es ergabt sich also ein Stundensatz von 0.3€ für die Hardware. Sonstige wesentliche Kosten neben den Hardwarekosten sind natürlich auch Arbeitsplatz, Möblierung, Strom, Internet und Lizenzen, welche einen Großteil der Ressourcenkosten ausmachen. Durch grobe Hochrechnung dieser ergaben sich Ressourcenkosten(ohne Personal) von ca. \eur{10} als Stundensatz.
 \tabelle{Projektkosten}{tab:Projektkosten}{Projektkosten.tex}
 
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
-Im folgenden Abschnitt soll berechnet werden, wann sich die Entwicklung aus wirtschaftlich Sicht für die Camelot ITLab GmbH und für den Kunden lohnt. Die Amortisationsdauer wird berechnet, indem man die Produktionskosten bzw. Anschaffungskosten durch die Gewinne bzw. Kostenersparnis, die aufgrund dieses Produktes entstanden sind, dividiert.
+Im folgenden Abschnitt wird gezeigt, wann sich die Entwicklung aus wirtschaftlicher Sicht für die Camelot ITLab GmbH und für den Kunden lohnt. Die Amortisationsdauer wird berechnet, indem man die Produktionskosten bzw. Anschaffungskosten durch die Gewinne bzw. Kostenersparnis, die aufgrund dieses Produktes entstanden sind, dividiert.
 
-\paragraph{Camelot ITLab}\mbox{} \\
-Für diese Tool wird ein Preis von etwa 500€ angesetzt. Der Break-Even-Point (Gewinnschwell) liegt also bei
+\paragraph{Camelot ITLab GmbH}\mbox{} \\
+Für diese Tool wird ein Preis von etwa 500€ angesetzt. Der Break-Even-Point (Gewinnschwelle) liegt also bei
 \begin{eqnarray}
 \frac{\eur{1510}}{\eur{500}} \approx 3 \mbox{ verkauften Einheiten} 
 \end{eqnarray}
 
-todo
-
 \paragraph{Kunde}\mbox{} \\
-In Fall dieses Projektes lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösungen, Kommentare per Email verschicken, Zettelwirtschaft, usw. deutlich verringert werden, zum anderen erspart das Tool dem Planer, welcher die Prozesse anlegt deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt, um die Kommentare einzutragen und an seine Kollegen zu verteilen. Des weiteren ermöglicht es den Mitarbeitern direkt an der Maschine Kommentare direkt in der Transaktion neben den Aufträgen zu sehen. In der folgenden Beispielrechnung werden drei Scenarien einmal durchgerechnet. 
+Hier lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösungen, Kommentare per Email verschicken, Zettelwirtschaft usw. deutlich verringert werden, zum anderen erspart das Tool dem Planer, welcher die Prozesse anlegt deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt, um die Kommentare einzutragen und an seine Kollegen zu verteilen. Des Weiteren ermöglicht es den Mitarbeitern direkt an der Maschine Kommentare direkt in der Transaktion neben den Aufträgen zu sehen. In der folgenden Beispielrechnung wurden drei Scenarien einmal durchgerechnet. 
 
 \paragraph{Beispielrechnung}
 Es wird davon ausgegangen, dass ein Planer jeden Tag ca. eine Stunde damit beschäftigt ist, Aufträge zu kommentieren. Dieses Tool bietet eine Zeitersparnis von ca. 50\%, da die Kommentare direkt in der Transaktion verfasst werden können. Dies bedeutet eine Zeiteinsparung von 30 Minuten pro Tag und pro Planer. Bei etwa 230 Arbeitstagen pro Jahr ergibt sich eine gesamte Zeiteinsparung von  
@@ -97,13 +88,13 @@ Während der Analysephase wurden einige der typischen Anwendungsfälle, die von 
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
-Wie in jedem anderen Projekt der Camelot ITLab GmbH gelten auch hier die Programmierrichtlinien des Unternehmens. Eine Auszug mit für dieses Projekt wichtigen Punkten findet sich im \Anhang{app:Programmierrichtlinien}. Außerdem muss es für den Administration Screen eine Eingabeüberprüfung geben, die verhindert, dass der User Keyfelder bzw. Felder, die in der Datenbanktabelle nicht vorhanden sind, angibt.
+Wie bei jedem anderen Projekt der Camelot ITLab GmbH gelten auch hier die Programmierrichtlinien des Unternehmens. Eine Auszug mit den für dieses Projekt wichtigen Punkten findet sich im \Anhang{app:Programmierrichtlinien}. Außerdem muss es für den Administration Screen eine Eingabeüberprüfung geben, die verhindert, dass der User Keyfelder bzw. Felder, die in der Datenbanktabelle nicht vorhanden sind, angibt.
 
 \subsection{Lastenheft/Fachkonzept}
 \label{sec:Lastenheft}
-Das Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+Das Lastenheft beschreibt die vom ``Auftraggeber festgelegte Gesamtheit der Forderungen an die Lieferungen und Leistungen eines Auftragnehmers innerhalb eines Auftrags``(\cite{Wiki.Induux}). Das Lastenheft, welches im Bezug auf dieses Projekt entstanden ist, befindet sich im \Anhang{app:Lastenheft}. 
 
-todo
+toshow
 
 \Zwischenstand{Analysephase}{Analyse}
 

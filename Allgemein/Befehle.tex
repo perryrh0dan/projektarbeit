@@ -94,3 +94,13 @@
 \newcommand{\CodeSmell}[1]{\Fachbegriff{#1}}
 \newcommand{\Metrik}[1]{\Fachbegriff{#1}}
 \newcommand{\DesignPattern}[1]{\Fachbegriff{#1}}
+
+% Tabellen und Abbildungsverzeichnis
+% ------------------------------------------------------------------------------
+\renewcommand{\cftfigpresnum}{Abbildung\ }
+\renewcommand{\cfttabpresnum}{Tabelle\ }
+
+\newlength{\mylenf}
+\settowidth{\mylenf}{\cftfigpresnum}
+\setlength{\cftfignumwidth}{\dimexpr\mylenf+2.5em}
+\setlength{\cfttabnumwidth}{\dimexpr\mylenf+1em}

@@ -4,19 +4,19 @@
 
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
-Das Abschlussprojekt soll wie bereits im Projektziel beschrieben eine Erweiterung zu bereits vorhandenen Transaktionen darstellen als auch eigene Programme zur Verwaltung und Massenpflege der Kommentare mit sich bringen. Als Programmiersprache wird \ac{ABAP} verwendet, eine eigens von der SAP entwickelte Programmiersprache, die in ihrer Grundstruktur der Sprache COBOL ähnelt.
+Das Abschlussprojekt sollte wie bereits im ~\nameref{sec:Projektziel} beschrieben eine Erweiterung zu bereits vorhandenen Transaktionen darstellen und eigene Programme zur Verwaltung und Massenpflege der Kommentare erbringen. Als Programmiersprache wurde \ac{ABAP} verwendet, eine eigens von der SAP entwickelte Programmiersprache, die in ihrer Grundstruktur der Sprache COBOL ähnelt.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
-Die Programme im \ac{APO} und \ac{ECC} werden nach dem \ac{MVC} Konzept programmiert. Allerdings habe ich in diesem Fall kein Model benötigt. Es gibt in jedem System jeweils eine \ac{GUI} Klasse, welche für die visuelle Darstellung und die Reaktion auf Benutzerinteraktionen zuständig ist. Diese Klasse besitzt für jeden Screen eine Member Struktur, die die anzuzeigenden Daten hält und jeweils eine \ac{PBO} und \ac{PAI} Methode. Die jeweiligen Screens werden in einer Funktionsgruppe definiert und mithilfe des SAP Screen Painters gestaltet. Außerdem gibt es jeweils eine Controller Klasse, welcher für die gesamte Logik zuständig ist. Die Startpunkte der Programme sind jeweils ein Report welcher, entweder einen Selektionsbildschirm hat oder direkt über ein Funktionsmodul, welches in der Funktionsgruppe definiert ist den gewünschten Screen aufruft, da aus einem Report direkt kein Screen aufgerufen werden kann. Das \ac{PBO} und das \ac{PAI} in der Funktionsgruppe sind dynamisch agierende Module, welche dann auf die jeweilige Methode der \ac{GUI} Klasse weiterleiten.
+Die Programme im \ac{APO} und \ac{ECC} wurden nach dem \ac{MVC} Konzept programmiert. Allerdings habe ich in diesem Fall kein Model benötigt. Es gibt in jedem System jeweils eine \ac{GUI} Klasse, welche für die visuelle Darstellung und die Reaktion auf Benutzerinteraktionen zuständig ist. Diese Klasse besitzt für jeden Screen eine Member Struktur, die die anzuzeigenden Daten hält und jeweils eine \ac{PBO} und \ac{PAI} Methode. Die jeweiligen Screens wurden in einer Funktionsgruppe definiert und mithilfe des SAP Screen Painters gestaltet. Außerdem gibt es jeweils eine Controller Klasse, welche für die gesamte Logik zuständig ist. Die Startpunkte der Programme sind jeweils ein Report, welcher entweder einen Selektionsbildschirm hat oder direkt über ein Funktionsmodul, welches in der Funktionsgruppe definiert ist, den gewünschten Screen aufruft, da aus einem Report direkt kein Screen aufgerufen werden kann. Das \ac{PBO} und das \ac{PAI} in der Funktionsgruppe sind dynamisch agierende Module, welche dann auf die jeweilige Methode der \ac{GUI} Klasse weiterleiten.
 
 \subsection{Entwurf des Userinterface}
 \label{sec:Benutzeroberflaeche} 
-Um die Anwendungen möglichst Benutzerfreundlich zu gestalten wurde im Vorfeld klar strukturiert auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die möglichen Selektionskriterien vorab geplant damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im \ac{ECC} einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbank Tabelle AUFK angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wird darauf geachtet, dass der code leicht zu erweitern ist, da hier später auch noch weitere Tabellen und Felder ausgewählt werden sollen können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftrags Daten und die zugehörigen Kommentaren in einem \ac{ALV} dargestellt. Im \ac{APO} wird es denselben Hauptscreen auch geben hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig der Kategorie in der Datenbank /SAPAPO/ORDFLDS gespeichert werden. 
+Um die Anwendungen möglichst benutzerfreundlich zu gestalten, wurde im Vorfeld klar strukturiert, auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die möglichen Selektionskriterien vorab geplant, damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im \ac{ECC} einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbank Tabelle AUFK angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wurde darauf geachtet, dass der Code leicht zu erweitern ist, da später auch noch weitere Tabellen und Felder ausgewählt werden sollen können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftragsdaten und die zugehörigen Kommentare in einem \ac{ALV} dargestellt. Im \ac{APO} wird es denselben Hauptscreen auch geben, hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig von der Kategorie in der Datenbank /SAPAPO/ORDFLDS gespeichert werden. 
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
-Im ECC werden zwei Datenbank Tabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der doch Relativ simplen Datenbanken und die Erweiterungen werden in den folgenden \ac{UML}s dargestellt.
+Im ECC werden zwei Datenbank Tabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML}s dargestellt.
 
 \begin{figure}[htb]
 \centering
@@ -34,7 +34,7 @@ Die Tabelle AUFK wird mittels einem Custom Include um ein Feld ZZ\_ORDER\_COMMEN
 	\label{fig:ECC02}
 \end{figure} 
 
-Im \ac{APO} wird keine Extra Datenbank zum Speichern der Kommentare benötigt, da hier, wie bereits oben erwähnt,direkt die /SAPAPO/ORDFLDS per Custom Include um ein FELD ORDER\_COMMENT erweitert und für alle Aufträge genutzt werden kann.  
+Im \ac{APO} wird keine extra Datenbank zum Speichern der Kommentare benötigt, da hier, wie bereits oben erwähnt,direkt die /SAPAPO/ORDFLDS per Custom Include um ein FELD ORDER\_COMMENT erweitert und für alle Aufträge genutzt werden kann.  
 
 \begin{figure}[htb]
 	\centering
@@ -45,7 +45,7 @@ Im \ac{APO} wird keine Extra Datenbank zum Speichern der Kommentare benötigt, d
 
 \subsection{Maßnahmen zur Qualitätssicherung}
 \label{sec:Qualitaetssicherung}
-Um die hohen Qualitätsanforderungen der Camelot ITLab zu gewährleisten und die Qualitätsanforderungen des Projekts zu sicher, werden während der laufenden Entwicklung nach jedem Iterationsschritt die neu eingebauten Funktionalitäten getestet. Außerdem wird es mehrere Code Review geben in denen andere Entwickler sich den Code anschauen und gegebenenfalls Schwachstellen erkennen und Verbesserungsvorschläge einbringen. Alle Tests werden manuell durchgeführt.  
+Um die hohen Qualitätsanforderungen der Camelot ITLab GmbH zu gewährleisten und die Qualitätsanforderungen des Projekts zu sichern, wurden während der laufenden Entwicklung nach jedem Iterationsschritt die neu eingebauten Funktionalitäten getestet. Außerdem gab es mehrere Code Reviews in denen andere Entwickler sich den Code anschauten und nach Schwachstellen suchten und ggf. Verbesserungsvorschläge einbrachten. Alle Tests wurden manuell durchgeführt.  
 
 \subsection{Pflichtenheft/Datenverarbeitungskonzept}
 \label{sec:Pflichtenheft}
