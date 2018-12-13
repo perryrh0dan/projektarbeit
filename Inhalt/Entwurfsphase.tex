@@ -4,7 +4,7 @@
 
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
-Das Abschlussprojekt sollte wie bereits im ~\nameref{sec:Projektziel} beschrieben eine Erweiterung zu bereits vorhandenen Transaktionen darstellen und eigene Programme zur Verwaltung und Massenpflege der Kommentare erbringen. Als Programmiersprache wurde \ac{ABAP} verwendet, eine eigens von der SAP entwickelte Programmiersprache, die in ihrer Grundstruktur der Sprache COBOL ähnelt.
+Das Abschlussprojekt sollte wie bereits im ~\nameref{sec:Projektziel} beschrieben, eine Erweiterung zu bereits vorhandenen Transaktionen darstellen und eigene Programme zur Verwaltung und Massenpflege der Kommentare erbringen. Als Programmiersprache wurde \ac{ABAP} verwendet, eine eigens von der SAP entwickelte Programmiersprache, die in ihrer Grundstruktur der Sprache COBOL ähnelt.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
@@ -12,11 +12,11 @@ Die Programme im \ac{APO} und \ac{ECC} wurden nach dem \ac{MVC} Konzept programm
 
 \subsection{Entwurf des Userinterface}
 \label{sec:Benutzeroberflaeche} 
-Um die Anwendungen möglichst benutzerfreundlich zu gestalten, wurde im Vorfeld klar strukturiert, auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die möglichen Selektionskriterien vorab geplant, damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im \ac{ECC} einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbank Tabelle AUFK angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wurde darauf geachtet, dass der Code leicht zu erweitern ist, da später auch noch weitere Tabellen und Felder ausgewählt werden sollen können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftragsdaten und die zugehörigen Kommentare in einem \ac{ALV} dargestellt. Im \ac{APO} wird es denselben Hauptscreen auch geben, hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig von der Kategorie in der Datenbank /SAPAPO/ORDFLDS gespeichert werden. 
+Um die Anwendungen möglichst benutzerfreundlich zu gestalten, wurde im Vorfeld klar strukturiert, auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die möglichen Selektionskriterien vorab geplant, damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im \ac{ECC} einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbanktabelle AUFK (für Produktions- und Prozessaufträge) angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wurde darauf geachtet, dass der Code leicht zu erweitern ist, da später auch noch weitere Tabellen und Felder ausgewählt werden können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftragsdaten und die zugehörigen Kommentare in einem \ac{ALV} dargestellt. Im \ac{APO} wird es denselben Hauptscreen auch geben, hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig von der Kategorie in der Datenbank /SAPAPO/ORDFLDS gespeichert werden. 
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
-Im ECC werden zwei Datenbank Tabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML}s dargestellt.
+Im ECC werden zwei Datenbanktabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML}s dargestellt.
 
 \begin{figure}[htb]
 \centering
