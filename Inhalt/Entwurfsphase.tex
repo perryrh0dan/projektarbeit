@@ -16,7 +16,7 @@ Um die Anwendungen möglichst benutzerfreundlich zu gestalten, wurde im Vorfeld 
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
-Im ECC werden zwei Datenbanktabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML}s dargestellt.
+Im ECC wurden zwei Datenbanktabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML} Diagrammen dargestellt.
 
 \begin{figure}[htb]
 \centering
@@ -25,7 +25,7 @@ Im ECC werden zwei Datenbanktabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. 
 \label{fig:ECC01}
 \end{figure} 
 
-Die Tabelle AUFK wird mittels einem Custom Include um ein Feld ZZ\_ORDER\_COMMENT erweitert. Dieses wird für die COR Erweiterung gebraucht. Außerdem wird eine Datenbank Tabelle /CAMELOT/OC\_SETT erstellt, wie in dem folgenden \ac{UML} beschrieben. In dieser Datenbank wird vorerst lediglich ein Feldname der AUFK gespeichert. Später muss diese Tabelle dann noch um einen Tabellenname erweitert werden.
+Die Tabelle AUFK wurde mittels einem Custom Include um ein Feld ZZ\_ORDER\_COMMENT erweitert. Dieses wird für die COR Erweiterung gebraucht. Zum andere wurde eine Datenbanktabelle /CAMELOT/OC\_SETT erstellt, wie in dem folgenden \ac{UML} Diagramm beschrieben. In dieser Datenbank wird vorerst lediglich ein Feldname der AUFK gespeichert. In einer späteren Version soll diese Tabelle dann noch um einen Tabellennamen erweitert werden.
 
 \begin{figure}[htb]
 	\centering
@@ -34,7 +34,7 @@ Die Tabelle AUFK wird mittels einem Custom Include um ein Feld ZZ\_ORDER\_COMMEN
 	\label{fig:ECC02}
 \end{figure} 
 
-Im \ac{APO} wird keine extra Datenbank zum Speichern der Kommentare benötigt, da hier, wie bereits oben erwähnt,direkt die /SAPAPO/ORDFLDS per Custom Include um ein Feld ORDER\_COMMENT erweitert und für alle Aufträge genutzt werden kann.  
+Im \ac{APO} wird keine zusätzliche Datenbank zum Speichern der Kommentare benötigt, da hier, wie bereits oben erwähnt, direkt die /SAPAPO/ORDFLDS per Custom Include um ein Feld ORDER\_COMMENT erweitert wurde und für alle Aufträge genutzt werden kann.  
 
 \begin{figure}[htb]
 	\centering
@@ -45,7 +45,7 @@ Im \ac{APO} wird keine extra Datenbank zum Speichern der Kommentare benötigt, d
 
 \subsection{Maßnahmen zur Qualitätssicherung}
 \label{sec:Qualitaetssicherung}
-Um die hohen Qualitätsanforderungen der Camelot ITLab GmbH zu gewährleisten und die Qualitätsanforderungen des Projekts zu sichern, wurden während der laufenden Entwicklung nach jedem Iterationsschritt die neu eingebauten Funktionalitäten getestet. Außerdem gab es mehrere Code Reviews in denen andere Entwickler sich den Code anschauten und nach Schwachstellen suchten und ggf. Verbesserungsvorschläge einbrachten. Alle Tests wurden manuell durchgeführt.  
+Um die hohen Qualitätsanforderungen der Camelot ITLab GmbH zu gewährleisten und die Qualitätsanforderungen des Projekts zu sichern, wurden während der laufenden Entwicklung nach jedem Iterationsschritt die neu eingebauten Funktionalitäten getestet. Außerdem gab es mehrere Code Reviews, in denen andere Entwickler sich den Code anschauten, nach Schwachstellen suchten und ggf. Verbesserungsvorschläge einbrachten. Alle Tests wurden manuell durchgeführt.  
 
 \subsection{Pflichtenheft/Datenverarbeitungskonzept}
 \label{sec:Pflichtenheft}
