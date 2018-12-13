@@ -8,22 +8,23 @@ Das Projekt wurde im Umfeld der Produktionsplanung durchgeführt und bezieht sic
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
-Aufgrund der Probleme, die bereits in der ~\nameref{sec:Projektbegruendung} und der ~\nameref{sec:IstAnalyse} beschrieben wurden, ist ersichtlich, wie wichtig und hilfreich dieses Projekt ist. Trotzdem wurde im folgenden Abschnitt analysieren ob die Umsetzung auch aus wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
+Aufgrund der Probleme, die bereits in der ~\nameref{sec:Projektbegruendung} und der ~\nameref{sec:IstAnalyse} beschrieben wurden, ist ersichtlich, wie wichtig und hilfreich dieses Projekt ist. Trotzdem wurde im folgenden Abschnitt analysiert, ob die Umsetzung auch aus wirtschaftlichen Gesichtspunkten gerechtfertigt ist.
 
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
-Es wurden neben den Kosten, die für Hardware und Software anfallen auch die Personalkosten berücksichtigt.
-Da die genauen Personalkosten Betriebsgeheimnis sind, werden die Kalkulationen mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergab sich aus dem Monatsgehalt von ca. 1000€.
+Es wurden neben den Kosten, die für Hardware und Software anfallen, auch die Personalkosten berücksichtigt. 
+\newline
+Da die genauen Personalkosten Betriebsgeheimnis sind, wurde die Kalkulationen mit groben Stundensätzen durchgeführt. Der Stundensatz eines Auszubildenden ergab sich aus dem Monatsgehalt von ca. 1000€.
 		
 \begin{eqnarray}
-	365 \mbox{ Tage/Jahr} \cdot \frac{5}{7} - 30 Tage = 260 \mbox{ Tage/Jahr}\\
+	365 \mbox{ Tage/Jahr} \cdot \frac{5}{7} - 30 Tage = 230 \mbox{ Tage/Jahr}\\
 	8 \mbox{ h/Tag} \cdot 230 \mbox{ Tage/Jahr} = 1840 \mbox{ h/Jahr}\\
 	\eur{1000}\mbox{/Monat} \cdot 12 \mbox{ Monate/Jahr} = \eur{12000} \mbox{/Jahr}\\
 	\frac{\eur{12000} \mbox{/Jahr}}{1840 \mbox{ h/Jahr}} \approx \eur{6,52}\mbox{/h}
 \end{eqnarray}
 	
-Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€.
-Die Kosten eines normalen Mitarbeiters wurden auf 25€ die Stunde geschätzt. 
+Der Rechnung zufolge beträgt der Stundensatz eines Azubis ca. 7€. Die Kosten eines Mitarbeiters wurden auf 25€ die Stunde geschätzt. 
+\newline
 Um die anfallenden Hardwarekosten zu berechnen, wurden die Anschaffungskosten aller Geräte summiert und dann durch die durchschnittliche Lebenszeit in Arbeitsstunden, in diesem Fall 3 * 365 * 5/7 * 8, geteilt.
 	
 Tabelle~\ref{tab:Hardwarekosten} zeigt die Hardwarekosten, die für die Geräte eines Mitarbeiters anfallen.
@@ -34,21 +35,24 @@ Tabelle~\ref{tab:Hardwarekosten} zeigt die Hardwarekosten, die für die Geräte 
 	\frac{\eur{560} \mbox{/Jahre}}{1840 \mbox{ h/Jahr}} \approx \eur{0.30}\mbox{/h}
 \end{eqnarray}
 
-Es ergabt sich also ein Stundensatz von 0.3€ für die Hardware. Sonstige wesentliche Kosten neben den Hardwarekosten sind natürlich auch Arbeitsplatz, Möblierung, Strom, Internet und Lizenzen, welche einen Großteil der Ressourcenkosten ausmachen. Durch grobe Hochrechnung dieser ergaben sich Ressourcenkosten(ohne Personal) von ca. \eur{10} als Stundensatz.
-\tabelle{Projektkosten}{tab:Projektkosten}{Projektkosten.tex}
+Damit ergab sich ein Stundensatz von \eur{0.3} für die Hardware.
+\newline
+Sonstige wesentliche Kosten neben den Hardwarekosten sind natürlich auch Arbeitsplatz, Möblierung, Strom, Internet und Lizenzen, welche einen Großteil der Ressourcenkosten ausmachen. Durch grobe Hochrechnung dieser ergaben sich insgesamt Ressourcenkosten (ohne Personal) von ca. \eur{10} als Stundensatz.
+\tabelle{Projektkosten}{tab:Projektkosten}{Projektkosten.tex}\\
+Wie in Tabelle~\ref{tab:Projektkosten} ermittelt, betrugen die gesamten Projektkosten \eur{1510}.
 
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
 Im folgenden Abschnitt wird gezeigt, wann sich die Entwicklung aus wirtschaftlicher Sicht für die Camelot ITLab GmbH und für den Kunden lohnt. Die Amortisationsdauer wird berechnet, indem man die Produktionskosten bzw. Anschaffungskosten durch die Gewinne bzw. Kostenersparnis, die aufgrund dieses Produktes entstanden sind, dividiert.
 
 \paragraph{Camelot ITLab GmbH}\mbox{} \\
-Für diese Tool wird ein Preis von etwa 500€ angesetzt. Der Break-Even-Point (Gewinnschwelle) liegt also bei
+Für dieses Tool wird ein Preis von etwa 500€ angesetzt. Der Break-Even-Point (Gewinnschwelle) liegt also bei
 \begin{eqnarray}
 \frac{\eur{1510}}{\eur{500}} \approx 3 \mbox{ verkauften Einheiten} 
 \end{eqnarray}
 
 \paragraph{Kunde}\mbox{} \\
-Hier lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösungen, Kommentare per Email verschicken, Zettelwirtschaft usw. deutlich verringert werden, zum anderen erspart das Tool dem Planer, welcher die Prozesse anlegt deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt, um die Kommentare einzutragen und an seine Kollegen zu verteilen. Des Weiteren ermöglicht es den Mitarbeitern direkt an der Maschine Kommentare direkt in der Transaktion neben den Aufträgen zu sehen. In der folgenden Beispielrechnung wurden drei Scenarien einmal durchgerechnet. 
+Hier lassen sich die Gewinne nicht so leicht erfassen, da zum einen die Fehleranfälligkeit der alten Lösungen (Kommentare per Email verschicken, Zettelwirtschaft usw.) deutlich verringert werden, zum anderen erspart das Tool dem Planer, welcher die Aufträge anlegt, deutlich Zeit, da dieser nicht noch ein weiteres Programm benötigt, um die Kommentare einzutragen und an seine Kollegen zu verteilen. Des Weiteren ermöglicht es den Mitarbeitern, an der Ressource (Maschine) Kommentare direkt in der Transaktion neben den Aufträgen zu sehen. In der folgenden Beispielrechnung wurden drei Szenarien einmal durchgerechnet. 
 
 \paragraph{Beispielrechnung}
 Es wird davon ausgegangen, dass ein Planer jeden Tag ca. eine Stunde damit beschäftigt ist, Aufträge zu kommentieren. Dieses Tool bietet eine Zeitersparnis von ca. 50\%, da die Kommentare direkt in der Transaktion verfasst werden können. Dies bedeutet eine Zeiteinsparung von 30 Minuten pro Tag und pro Planer. Bei etwa 230 Arbeitstagen pro Jahr ergibt sich eine gesamte Zeiteinsparung von  
@@ -56,7 +60,7 @@ Es wird davon ausgegangen, dass ein Planer jeden Tag ca. eine Stunde damit besch
 230 \mbox{ Tage/Jahr} \cdot 30 \mbox{ min/Tag} = 6900 \mbox{ min/Jahr} = 115 \mbox{ h/Jahr} 
 \end{eqnarray}
 
-Das Gehalt eines Produktionsplaners beträgt laut Experten etwa 14€ die Stunde. Die tatsächlichen Kosten, incl. Nebenkosten, die für die Firma anfallen, werden auf ca. 20€ geschätzt. Dadurch ergibt sich eine jährliche Einsparung von 
+Das Gehalt eines Produktionsplaners beträgt etwa \eur{14} die Stunde. Die tatsächlichen Kosten, incl. Nebenkosten, die für die Firma anfallen, werden auf ca. 20€ geschätzt. Dadurch ergibt sich eine jährliche Einsparung von 
 \begin{eqnarray}
 115 \mbox{h} \cdot \eur{(20)}{\mbox{/h}} = \eur{2300}
 \end{eqnarray}
@@ -64,7 +68,7 @@ Das Gehalt eines Produktionsplaners beträgt laut Experten etwa 14€ die Stunde
 Je nach Firmengröße und Anzahl der Planer variiert die Amortisationszeit stark. Daher wurden Anhand dreier Beispiele die Zeit berechnet.
 
 Die Amortisationszeit für eine kleine Firma mit 2 Planern beträgt:
-$\frac{\eur{500}}{2 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,19 \mbox{ Jahre} \approx 10 \mbox{ Wochen}$.
+$\frac{\eur{500}}{2 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,10 \mbox{ Jahre} \approx 5 \mbox{ Wochen}$.
 
 Die Amortisationszeit für eine mittelgroße Firma mit 50 Planern beträgt
 $\frac{\eur{500}}{50 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,004 \mbox{ Jahre} \approx 1,5 \mbox{ Tage}$.
@@ -72,13 +76,15 @@ $\frac{\eur{500}}{50 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,004 \mbox{ Jah
 Die Amortisationszeit für eine große Firma mit 200 Planern beträgt
 $\frac{\eur{500}}{200 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,001 \mbox{ Jahre} \approx 9 \mbox{ Stunden}$.
 
+Man erkennt, dass das Projekt sowohl für die Camelot ITLab GmbH als auch für den Kunden wirtschaftlich Sinnvoll ist.
+
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
-In der folgenden Tabelle ~\ref{tab:Nutzwertanalyse} werden noch einige weitere Punkte aufgeführt, welche abseits der primären finanziellen Aspekte für diese Produkt bzw. die alten Verfahren sprechen. Für Kriterien die in direktem Zusammenhang mit der Produktion und den erzielten Ergebnissen stehen wird eine hohe Wichtung angesetzt Kriterien wie etwa Komfort, welche abhängig von persönliche Präferenzen des Planers sind, werden eher niedrig eingestuft.
+In der folgenden Tabelle ~\ref{tab:Nutzwertanalyse} werden noch einige weitere Punkte aufgeführt, welche abseits der primären finanziellen Aspekte für diese Produkt bzw. die alten Verfahren sprechen. Für Kriterien, die in direktem Zusammenhang mit der Produktion und den erzielten Ergebnissen stehen, wird eine hohe Gewichtung angesetzt. Kriterien wie etwa Komfort, welche abhängig von persönlichen Präferenzen des Planers sind, werden eher niedrig eingestuft.
 
 \tabelle{Nutzwertanalyse}{tab:Nutzwertanalyse}{Nutzwertanalyse}
 
-Sowie die Wirtschaftlichkeitsanalyse als auch die Nutzwertanalyse haben gezeigt wie sinnvoll und hilfreich diese Projekt ist.
+Sowohl die Wirtschaftlichkeitsanalyse als auch die Nutzwertanalyse haben gezeigt wie sinnvoll und hilfreich diese Projekt ist.
 
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
