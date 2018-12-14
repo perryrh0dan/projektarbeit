@@ -12,34 +12,34 @@ Die Programme im \ac{APO} und \ac{ECC} wurden nach dem \ac{MVC} Konzept programm
 
 \subsection{Entwurf des Userinterface}
 \label{sec:Benutzeroberflaeche} 
-Um die Anwendungen möglichst benutzerfreundlich zu gestalten, wurde im Vorfeld klar strukturiert, auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die möglichen Selektionskriterien vorab geplant, damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im \ac{ECC} einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbanktabelle AUFK (für Produktions- und Prozessaufträge) angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wurde darauf geachtet, dass der Code leicht zu erweitern ist, da später auch noch weitere Tabellen und Felder ausgewählt werden können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftragsdaten und die zugehörigen Kommentare in einem \ac{ALV} dargestellt. Im \ac{APO} wird es denselben Hauptscreen auch geben, hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig von der Kategorie in der Datenbank /SAPAPO/ORDFLDS gespeichert werden. 
+Um die Anwendungen möglichst benutzerfreundlich zu gestalten, wurde im Vorfeld klar strukturiert, auf welchem Screen der User welche Informationen angezeigt bekommen soll. Außerdem wurden die möglichen Selektionskriterien vorab geplant, damit später keine Zeit mit der Erstellung von unnötigen Datenstrukturen verbraucht wird. Es wird später im \ac{ECC} einen Screen mit dem Namen Administration geben, auf welchem der Planer ein Feld der Datenbanktabelle AUFK (für Produktions- und Prozessaufträge) angeben kann, in welchem dann der Kommentar gespeichert wird. Hier wurde darauf geachtet, dass der Code leicht zu erweitern ist, da später auch noch weitere Tabellen und Felder ausgewählt werden können wie z.B. die PLAF, in welcher Planaufträge gespeichert sind. Auf dem Hauptscreen des Programms werden die Auftragsdaten und die zugehörigen Kommentare in einem \ac{ALV} dargestellt. Im \ac{APO} wird es denselben Hauptscreen auch geben, hier fällt allerdings der Administration Screen weg, da hier alle Kommentare unabhängig von der Kategorie in der Datenbank \textsc{/sapapo/ordflds} gespeichert werden. 
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
-Im ECC wurden zwei Datenbanktabellen erstellt. Zum einen die /CAMELOT/OC\_COMT. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML} Diagrammen dargestellt.
+Im ECC wurden zwei Datenbanktabellen erstellt. Zum einen die \textsc{/camelot/oc\_comt}s. Der Aufbau der Datenbanken und die Erweiterungen werden in den folgenden \ac{UML} Diagrammen dargestellt.
 
 \begin{figure}[htb]
 \centering
 \includegraphicsKeepAspectRatio{DatabaseTablesECC01.pdf}{0.7}
-\caption{Vereinfachtes Datenbank-Model der /CAMELOT/OC\_COMT}
+\caption{Vereinfachtes Datenbank-Model der \textsc{/camelot/oc\_comt}}
 \label{fig:ECC01}
 \end{figure} 
 
-Die Tabelle AUFK wurde mittels einem Custom Include um ein Feld ZZ\_ORDER\_COMMENT erweitert. Dieses wird für die COR Erweiterung gebraucht. Zum andere wurde eine Datenbanktabelle /CAMELOT/OC\_SETT erstellt, wie in dem folgenden \ac{UML} Diagramm beschrieben. In dieser Datenbank wird vorerst lediglich ein Feldname der AUFK gespeichert. In einer späteren Version soll diese Tabelle dann noch um einen Tabellennamen erweitert werden.
+Die Tabelle AUFK wurde mittels einem Custom Include um ein Feld \textsc{zz\_order\_comment} erweitert. Dieses wird für die COR Erweiterung gebraucht. Zum andere wurde eine Datenbanktabelle \textsc{/camelot/oc\_sett} erstellt, wie in dem folgenden \ac{UML} Diagramm beschrieben. In dieser Datenbank wird vorerst lediglich ein Feldname der AUFK gespeichert. In einer späteren Version soll diese Tabelle dann noch um einen Feld für den Tabellennamen erweitert werden.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphicsKeepAspectRatio{DatabaseTablesECC02.pdf}{0.2}
-	\caption{Vereinfachtes Datenbank-Modell der /CAMELOT/OC\_SET}
+	\caption{Vereinfachtes Datenbank-Modell der \textsc{/camelot/oc\_set}}
 	\label{fig:ECC02}
 \end{figure} 
 
-Im \ac{APO} wird keine zusätzliche Datenbank zum Speichern der Kommentare benötigt, da hier, wie bereits oben erwähnt, direkt die /SAPAPO/ORDFLDS per Custom Include um ein Feld ORDER\_COMMENT erweitert wurde und für alle Aufträge genutzt werden kann.  
+Im \ac{APO} wird keine zusätzliche Datenbank zum Speichern der Kommentare benötigt, da hier, wie bereits oben erwähnt, direkt die \textsc{/sapapo/ordflds} per Custom Include um ein Feld \textsc{order\_comment} erweitert wurde und für alle Aufträge genutzt werden kann.  
 
 \begin{figure}[htb]
 	\centering
 	\includegraphicsKeepAspectRatio{DatabaseTablesAPO01.pdf}{0.2}
-	\caption{Vereinfachtes Datenbank-Modell der /SAPAPO/ORDFLDS}
+	\caption{Vereinfachtes Datenbank-Modell der \textsc{/sapapo/ordflds}}
 	\label{fig:APO01}
 \end{figure} 
 
