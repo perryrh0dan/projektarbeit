@@ -67,13 +67,12 @@ Das Gehalt eines Produktionsplaners beträgt etwa \eur{14} die Stunde. Die tats�
 
 Je nach Firmengröße und Anzahl der Planer variiert die Amortisationszeit stark. Daher wurden Anhand dreier Beispiele die Zeit berechnet.
 
-<<<<<<< HEAD
-Die Amortisationszeit für eine kleine Firma mit 2 Planern beträgt:
-$\frac{\eur{500}}{2 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,10 \mbox{ Jahre} \approx 5 \mbox{ Wochen}$.
-=======
 Die Amortisationszeit für eine Firma mit 2 Planern beträgt:
+<<<<<<< HEAD
 $\frac{\eur{500}}{2 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,19 \mbox{ Jahre} \approx 10 \mbox{ Wochen}$.
->>>>>>> 23d73436858ad4cb7591194657807f63460620f5
+=======
+$\frac{\eur{500}}{2 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,10 \mbox{ Jahre} \approx 5 \mbox{ Wochen}$.
+>>>>>>> origin/feat/mergeProblem
 
 Die Amortisationszeit für eine Firma mit 50 Planern beträgt
 $\frac{\eur{500}}{50 \cdot \eur{2300€} \mbox{/Jahr} } \approx 0,004 \mbox{ Jahre} \approx 1,5 \mbox{ Tage}$.
@@ -90,10 +89,10 @@ In der folgenden Tabelle ~\ref{tab:Nutzwertanalyse} werden noch einige weitere P
 \tabelle{Nutzwertanalyse}{tab:Nutzwertanalyse}{Nutzwertanalyse}
 
 <<<<<<< HEAD
-Sowohl die Wirtschaftlichkeitsanalyse als auch die Nutzwertanalyse haben gezeigt wie sinnvoll und hilfreich diese Projekt ist.
-=======
 Sowie die Wirtschaftlichkeitsanalyse als auch die Nutzwertanalyse, in welchem das Order Comment Tool mit 123 Punkten der klare Gewinner ist, haben gezeigt wie sinnvoll und hilfreich diese Projekt ist.
->>>>>>> 23d73436858ad4cb7591194657807f63460620f5
+=======
+Aus dieser Nutzwertanalyse geht das Order Comment Tool mit 123 Punkten als Gewinner hervor.
+>>>>>>> origin/feat/mergeProblem
 
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
@@ -101,7 +100,7 @@ Während der Analysephase wurden einige der typischen Anwendungsfälle, die von 
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
-Wie bei jedem anderen Projekt der Camelot ITLab GmbH gelten auch hier die Programmierrichtlinien des Unternehmens. Eine Auszug mit den für dieses Projekt wichtigen Punkten findet sich im \Anhang{app:Programmierrichtlinien}. Außerdem muss es für den Administration Screen eine Eingabeüberprüfung geben, die verhindert, dass der User Keyfelder bzw. Felder, die in der Datenbanktabelle nicht vorhanden sind, angibt.
+Wie bei jedem anderen Projekt der Camelot ITLab GmbH gelten auch hier die Programmierrichtlinien des Unternehmens. Ein Auszug mit den für dieses Projekt wichtigen Punkten findet sich im \Anhang{app:Programmierrichtlinien}. Außerdem muss es für den Administration Screen eine Eingabeüberprüfung geben, die verhindert, dass der User Keyfelder bzw. Felder, die in der Datenbanktabelle nicht vorhanden sind, angibt.
 
 \subsection{Lastenheft/Fachkonzept}
 \label{sec:Lastenheft}
