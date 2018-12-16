@@ -8,7 +8,7 @@ Das Abschlussprojekt sollte wie bereits im ~\nameref{sec:Projektziel} beschriebe
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
-Die Programme im \ac{APO} und \ac{ECC} wurden nach dem \ac{MVC} Konzept programmiert. Allerdings habe ich in diesem Fall kein Model benötigt. Es gibt in jedem System jeweils eine \ac{GUI} Klasse, welche für die visuelle Darstellung und die Reaktion auf Benutzerinteraktionen zuständig ist. Diese Klasse besitzt für jeden Screen eine Member Struktur, die die anzuzeigenden Daten hält und jeweils eine \ac{PBO} und \ac{PAI} Methode. Die jeweiligen Screens wurden in einer Funktionsgruppe definiert und mithilfe des SAP Screen Painters gestaltet. Außerdem gibt es jeweils eine Controller Klasse, welche für die gesamte Logik zuständig ist. Die Startpunkte der Programme sind jeweils ein Report, welcher entweder einen Selektionsbildschirm hat oder direkt über ein Funktionsmodul, welches in der Funktionsgruppe definiert ist, den gewünschten Screen aufruft, da aus einem Report direkt kein Screen aufgerufen werden kann. Das \ac{PBO} und das \ac{PAI} in der Funktionsgruppe sind dynamisch agierende Module, welche dann auf die jeweilige Methode der \ac{GUI} Klasse weiterleiten.
+Die Programme im \ac{APO} und \ac{ECC} wurden nach dem \ac{MVC} Konzept programmiert. Allerdings habe ich in diesem Fall kein Modell für die Datenhaltung benötigt. Es gibt in jedem System jeweils eine \ac{GUI} Klasse, welche für die visuelle Darstellung und die Reaktion auf Benutzerinteraktionen zuständig ist. Diese Klasse besitzt für jeden Screen eine Member Struktur, die die anzuzeigenden Daten hält und jeweils eine \ac{PBO} und \ac{PAI} Methode. Die jeweiligen Screens wurden in einer Funktionsgruppe definiert und mithilfe des SAP Screen Painters gestaltet. Außerdem gibt es jeweils eine Controller Klasse, welche für die gesamte Logik zuständig ist. Die Startpunkte der Programme sind jeweils ein Report, welcher entweder einen Selektionsbildschirm hat oder direkt über ein Funktionsmodul, welches in der Funktionsgruppe definiert ist, den gewünschten Screen aufruft, da aus einem Report direkt kein Screen aufgerufen werden kann. Das \ac{PBO} und das \ac{PAI} in der Funktionsgruppe sind dynamisch agierende Module, welche dann auf die jeweilige Methode der \ac{GUI} Klasse weiterleiten.
 
 \subsection{Entwurf des Userinterface}
 \label{sec:Benutzeroberflaeche} 
@@ -21,16 +21,16 @@ Im ECC wurden zwei Datenbanktabellen erstellt. Zum einen die \textsc{/camelot/oc
 \begin{figure}[htb]
 \centering
 \includegraphicsKeepAspectRatio{DatabaseTablesECC01.pdf}{0.7}
-\caption{Vereinfachtes Datenbank-Model der \textsc{/camelot/oc\_comt}}
+\caption{Vereinfachtes Datenbankmodell der \textsc{/camelot/oc\_comt}}
 \label{fig:ECC01}
 \end{figure} 
 
-Die Tabelle AUFK wurde mittels einem Custom Include um ein Feld \textsc{zz\_order\_comment} erweitert. Dieses wird für die COR Erweiterung gebraucht. Zum andere wurde eine Datenbanktabelle \textsc{/camelot/oc\_sett} erstellt, wie in dem folgenden \ac{UML} Diagramm beschrieben. In dieser Datenbank wird vorerst lediglich ein Feldname der AUFK gespeichert. In einer späteren Version soll diese Tabelle dann noch um einen Feld für den Tabellennamen erweitert werden.
+Die Tabelle AUFK wurde mittels einem Custom Include um ein Feld \textsc{zz\_order\_comment} erweitert. Dieses wird für die COR Erweiterung gebraucht. Zum andere wurde eine Datenbanktabelle \textsc{/camelot/oc\_sett} erstellt, wie in dem folgenden \ac{UML} Diagramm beschrieben. In dieser Datenbank wird vorerst lediglich ein Feldname der AUFK gespeichert. In einer späteren Version soll diese Tabelle dann noch um ein Feld für den Tabellennamen erweitert werden.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphicsKeepAspectRatio{DatabaseTablesECC02.pdf}{0.2}
-	\caption{Vereinfachtes Datenbank-Modell der \textsc{/camelot/oc\_set}}
+	\caption{Vereinfachtes Datenbankmodell der \textsc{/camelot/oc\_set}}
 	\label{fig:ECC02}
 \end{figure} 
 
@@ -39,7 +39,7 @@ Im \ac{APO} wird keine zusätzliche Datenbank zum Speichern der Kommentare benö
 \begin{figure}[htb]
 	\centering
 	\includegraphicsKeepAspectRatio{DatabaseTablesAPO01.pdf}{0.2}
-	\caption{Vereinfachtes Datenbank-Modell der \textsc{/sapapo/ordflds}}
+	\caption{Vereinfachtes Datenbankmodell der \textsc{/sapapo/ordflds}}
 	\label{fig:APO01}
 \end{figure} 
 
